@@ -1,0 +1,22 @@
+{
+  "name": "1",
+  "version": "1.0.0",
+  "description": "Uderscore",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pandora0667/JavaScritp.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pandora0667/JavaScritp/issues"
+  },
+  "homepage": "https://github.com/pandora0667/JavaScritp#readme",
+  "dependencies": { // --save 옵션을 주면 다음과 같은 의존성이 생김 ...
+    "underscore": "^1.8.3"
+  }
+}
