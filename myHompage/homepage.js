@@ -18,7 +18,7 @@ if (app.get('env') === 'development') {
     app.locals.pretty = true;
 }
 app.use(session({
-    secret: 'sgggrgtretwehfdh',
+    secret: '!@#Fsdfetfdgfhcbv',
     resave: false,
     saveUninitialized: true,
     store: new FileStore()
@@ -43,7 +43,6 @@ app.get('/', function (req, res) {
                 <p>
                 <a href="/login">Sign in</a><br>
               `);
-
 });
 
 app.get('/test', function (req, res) {
@@ -71,7 +70,7 @@ app.post('/login', function (req, res) {
 });
 
 app.get('/welcome', function (req, res) {
-    res.send('TEST');
+    res.render('main');
 });
 
 app.listen(3000, function () {
