@@ -23,7 +23,7 @@ app.use(session({
     saveUninitialized: true,
     store: new FileStore()
 }));
-
+/*
 app.get('/', function (req, res) {
     res.send(`
             <!DOCTYPE html>
@@ -64,15 +64,14 @@ app.post('/login', function (req, res) {
     if(admin.userId === userName && admin.userPwd === userPassword) {
         req.session.userName = userName;
       return req.session.save(function () { // 이건 세션 정보 저장?
-          console.log('test');
           res.redirect('/welcome');
       });
     }
     res.send('Login failed <a href="/login">return login</a>');
 
 });
-
-app.get('/welcome', function (req, res) {
+*/
+app.get('/', function (req, res) {
     res.render('main');
 });
 
