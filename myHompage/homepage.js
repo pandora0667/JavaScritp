@@ -71,7 +71,7 @@ app.post('/login', function (req, res) {
 
 });
 */
-app.get('/', function (req, res) {
+app.get('/', function (req, res)  //'/welcome'
     res.render('main');
 });
 
