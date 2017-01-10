@@ -10,7 +10,7 @@ const pug = require('pug');
 const app = express();
 const bodyParser = require('body-parser');
 const FileStore = require('session-file-store')(session);
-
+app.use(express.static('public'));
 
 app.use(bodyParser.urlencoded({ extended: false })); // post 방식
 app.set('view engine', 'pug');
@@ -62,8 +62,11 @@ app.post('/login', function (req, res) {
     const userPassword = req.body.password;
 
     if(admin.userId === userName && admin.userPwd === userPassword) {
-      //  return req.session.save(function () {} // 이건 세션 정보 저장?
-            res.redirect('/welcome');
+        req.session.userName = userName;
+      return req.session.save(function () { // 이건 세션 정보 저장?
+          console.log('test');
+          res.redirect('/welcome');
+      });
     }
     res.send('Login failed <a href="/login">return login</a>');
 

@@ -1,0 +1,9 @@
+h1 {
+    font-family: fantasy, cursive, serif;
+    color: olivedrab;
+    border-bottom: 1px dotted darkgreen;
+}
+p {
+    font-family: sans-serif;
+    color: orange;
+}
